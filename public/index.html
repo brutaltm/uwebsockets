@@ -1,0 +1,15 @@
+<html lang="PL-pl">
+    <meta charset="UTF-8">
+    <body>
+        <h1>Realtime communication with WebRTC</h1>
+        <button id="localButton">Get Local Video</button>
+        <button id="offerButton">Zaoferuj</button>
+        <button id="localVideoButton">Get Local Video src</button>
+        <div id="videos">
+            <video id="localVideo" autoplay muted playsinline controls width="600" height="400" preload="metadata"></video><br>
+            <video id="remoteVideo" muted playsinline controls width="600" height="400" preload="metadata"></video>
+        </div>
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <script src="Client.js"></script>
+    </body>
+</html>
