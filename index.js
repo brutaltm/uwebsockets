@@ -75,7 +75,7 @@ app = uWS.App()
         console.log("Rozłącza się użytkownik " + ws.username);
         app.publish(MESSAGE_ENUM.CLIENT_DISCONNECTED, JSON.stringify(pubMsg));
     }
-}).listen(port, token => {
+}).listen(7777, token => {
     token ?
     console.log(`Listening to port ${port}`) :
     console.log(`Failed to listen to port ${port}`);
@@ -86,7 +86,7 @@ app = uWS.App()
 const express = require('express');
 const serveIndex = require('serve-index');
 
-//const app2 = express();
-//app2.use(express.static(__dirname + '/public/'));
-//app2.use('/',serveIndex('public', {icons: true}));
-//app2.listen(port, function() { console.log('nasluchujemy na 8880'); });
+const app2 = express();
+app2.use(express.static(__dirname + '/public/'));
+app2.use('/',serveIndex('public', {icons: true}));
+app2.listen(port, function() { console.log('nasluchujemy na 8880'); });
