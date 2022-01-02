@@ -86,7 +86,7 @@ app = uWS.App()
 const express = require('express');
 const serveIndex = require('serve-index');
 
-const app2 = express();
-app2.use(express.static(__dirname + '/public/'));
-app2.use('/',serveIndex('public', {icons: true}));
-app2.listen(port, function() { console.log('nasluchujemy na 8880'); });
+//const app2 = express();
+//app2.use(express.static(__dirname + '/public/'));
+//app2.use('/',serveIndex('public', {icons: true}));
+//app2.listen(port, function() { console.log('nasluchujemy na 8880'); });
