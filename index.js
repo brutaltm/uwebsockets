@@ -1,7 +1,7 @@
 const uWS = require('./node_modules/uWebSockets.js');
 var SOCKETS = [];
 const decoder = new TextDecoder('utf-8');
-const port = process.env.PORT || 5000;
+const port = 80;//process.env.PORT || 5000;
 
 const MESSAGE_ENUM = Object.freeze({
     SELF_CONNECTED: "SELF_CONNECTED",
@@ -89,4 +89,4 @@ const serveIndex = require('serve-index');
 const app2 = express();
 app2.use(express.static(__dirname + '/public/'));
 app2.use('/',serveIndex('public', {icons: true}));
-app2.listen(port, function() { console.log('nasluchujemy na 8880'); });
+app2.listen(port, function() { console.log(`nasluchujemy na ${port}`); });
